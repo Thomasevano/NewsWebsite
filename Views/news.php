@@ -5,7 +5,6 @@
         <div class="row">
             <div class=" col-sm-12 col-md-6 col-lg-6">
                 <div class="row">
-
                     <div class="leftbar_content">
                         <h2>Les dernières news</h2>
                         <div class="single_stuff wow fadeInDown">
