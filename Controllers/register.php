@@ -1,5 +1,5 @@
 <?php
-if($_SESSION['auth']['level']== 1)
+if($_SESSION['auth'])
 {
     require "Models/register.php";
     if(isset($_POST['submit']))
@@ -7,7 +7,6 @@ if($_SESSION['auth']['level']== 1)
         addUser();
         echo ('Vous etes maintenant inscrit !');
     }
-    $_GET['p'] = 'admin';
     require "Views/register.php";
 }
 else
