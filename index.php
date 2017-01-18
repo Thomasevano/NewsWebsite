@@ -4,12 +4,12 @@ require "Models/connect.php";
 
 define('BASE_URL', dirname($_SERVER['SCRIPT_NAME']));
 
-if (!isset($_SESSION['auth']))
+/*if (!isset($_SESSION['auth']))
 {
     require "Controllers/login.php";
 }
 else
-{
+{*/
     if (!isset($_GET['p']) || $_GET['p'] == "")
     {
         $_GET['p'] = "news";
@@ -28,5 +28,5 @@ else
     ob_end_clean();
 
     require "Views/layout.php";
-}
+//}
 ?>

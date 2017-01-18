@@ -29,17 +29,17 @@
                             aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= BASE_URL; ?>/Views/layout.php">Your<span>News</span></a></div>
+                    <a class="navbar-brand" href="<?= BASE_URL; ?>/news">Your<span>News</span></a></div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav custom_nav">
-                        <li class=""><a href="<?= BASE_URL; ?>/Views/layout">Accueil</a></li>
+                        <li class=""><a href="<?= BASE_URL; ?>/news">Accueil</a></li>
                         <li class="dropdown"><a href="<?= BASE_URL; ?>/Views/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Jobs</a>
                         </li>
                         <li class="dropdown"><a href="<?= BASE_URL; ?>/Views/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mon Compte</a>
                         </li>
-                        <li><a href="<?= BASE_URL; ?>/Views/#">Contact</a></li>
-                        <li><a href="<?= BASE_URL; ?>/Views/login">Se Connecter</a></li>
-                        <li><a href="<?= BASE_URL; ?>/Views/register">S'inscrire</a></li>
+                        <li><a href="<?= BASE_URL; ?>/#">Contact</a></li>
+                        <li><a href="<?= BASE_URL; ?>/login">Se Connecter</a></li>
+                        <li><a href="<?= BASE_URL; ?>/register">S'inscrire</a></li>
                         <li><a href="<?= BASE_URL; ?>/disconnect"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
                     </ul>
                 </div>
