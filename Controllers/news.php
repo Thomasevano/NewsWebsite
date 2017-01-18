@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION['auth'])
+/*if($_SESSION['auth'])
 {
     require "Models/news.php";
     $_GET['p'] = 'accueil';
@@ -10,5 +10,10 @@ if($_SESSION['auth'])
 else
 {
     header("Location:".BASE_URL."/disconnect");
-}
+}*/
+
+require "Models/news.php";
+$_GET['p'] = 'accueil';
+require "Views/news.php";
+$News = getNews();
 ?>
