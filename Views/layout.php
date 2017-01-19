@@ -5,22 +5,12 @@
         <div class="row">
             <div class=" col-sm-12 col-md-6 col-lg-6">
                 <div class="row">
-
-                    <div class="leftbar_content">
-                        <h2>Les dernières news</h2>
+                    <!--<div class="leftbar_content">
+                        <h2>Les dernières news</h2>-->
                         <div class="single_stuff wow fadeInDown">
                             <?php echo $content; ?>
                         </div>
-                        <div class="stuffpost_paginatinonarea wow slideInLeft">
-                            <ul class="newstuff_pagnav">
-                                <li><a class="active_page" href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<!--                    </div>-->
                 </div>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3">

@@ -13,27 +13,28 @@ function getNews()
     }
     echo '</ul>';*/
 
-    $url = "http://www.jeuxvideo.com/rss/rss.xml";
+    /*$url = "http://tempsreel.nouvelobs.com/rss.xml";
     $rss = simplexml_load_file($url);
     foreach ($rss->channel->item as $item)
     {
         echo '<div class="single_stuff_article">';
         $datetime = date_create($item->pubDate);
-        $date = date_format($datetime, 'M d');
+        $date = date_format($datetime, 'd M H\hi');
         echo '<div class="single_sarticle_inner"><a class="stuff_category" href="#">'.$item->category.'</a><div class="stuff_article_inner"><span class="stuff_date"><strong>'.$date.'</strong></span><h2><a href="'.$item->link.'">'.$item->title.'</a></h2>','<p>'.$item->description.'</p></div></div>';
         echo '</div>';
-    }
+    }*/
 
-    /*$url = "http://www.ouest-france.fr/rss-en-continu.xml";
+    $url = "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/";
     $rss = simplexml_load_file($url);
+    echo'<div class="leftbar_content"><h2>Les dernières News</h2><h2>Les news de BFMTV</h2></div>';
     foreach ($rss->channel->item as $item)
     {
         echo '<div class="single_stuff_article">';
         $datetime = date_create($item->pubDate);
-        $date = date_format($datetime, 'M d');
+        $date = date_format($datetime, 'd M H\hi');
         echo '<div class="single_stuff_img"><img src="'.$item->img.'" alt=""></div><div class="single_sarticle_inner"><a class="stuff_category" href="#">'.$item->category.'</a><div class="stuff_article_inner"><span class="stuff_date"><strong>'.$date.'</strong></span><h2><a href="'.$item->link.'">'.$item->title.'</a></h2>','<p>'.$item->description.'</p></div></div>';
         echo '</div>';
-    }*/
+    }
 }
 
 ?>
