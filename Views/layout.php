@@ -7,10 +7,10 @@
                 <div class="row">
                     <!--<div class="leftbar_content">
                         <h2>Les dernières news</h2>-->
-                        <div class="single_stuff wow fadeInDown">
-                            <?php echo $content; ?>
-                        </div>
-<!--                    </div>-->
+                    <div class="single_stuff wow fadeInDown">
+                        <?php echo $content; ?>
+                    </div>
+                    <!--                    </div>-->
                 </div>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3">
