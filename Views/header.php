@@ -21,7 +21,7 @@
 </div>
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
 <header id="header">
-    <div class="container">
+    <!--<div class="container">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -29,18 +29,16 @@
                             aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= BASE_URL; ?>/news">Your<span>News</span></a></div>
+                    <a class="navbar-brand" href="<?/*= BASE_URL; */?>"><span>YourNews</span></a></div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav custom_nav">
-                        <li class=""><a href="<?= BASE_URL; ?>/news">Accueil</a></li>
-                        <li class="dropdown"><a href="<?= BASE_URL; ?>/Views/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Jobs</a>
+                        <li><a href="<?/*= BASE_URL; */?>"><i class="glyphicon glyphicon-home"></i> Accueil</a></li>
+                        <li><a href="<?/*= BASE_URL; */?>/account"><i class="glyphicon glyphicon-user"></i> Mon Compte</a>
                         </li>
-                        <li class="dropdown"><a href="<?= BASE_URL; ?>/Views/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mon Compte</a>
-                        </li>
-                        <li><a href="<?= BASE_URL; ?>/#">Contact</a></li>
-                        <li><a href="<?= BASE_URL; ?>/login">Se Connecter</a></li>
-                        <li><a href="<?= BASE_URL; ?>/register">S'inscrire</a></li>
-                        <li><a href="<?= BASE_URL; ?>/disconnect"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
+                        <li><a href="<?/*= BASE_URL; */?>/#">Contact</a></li>
+                        <li><a href="<?/*= BASE_URL; */?>/login">Se Connecter</a></li>
+                        <li><a href="<?/*= BASE_URL; */?>/register">S'inscrire</a></li>
+                        <li><a href="<?/*= BASE_URL; */?>/disconnect"><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,5 +47,38 @@
             <input type="text" placeholder="Rechercher...">
             <input type="submit" value="">
         </form>
-    </div>
-</header>
+    </div>-->
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?= BASE_URL; ?>"><span>YourNews</span></a></div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav custom_nav">
+                        <li><a href="<?= BASE_URL; ?>"><i class="glyphicon glyphicon-home"></i> Accueil</a></li>
+                        <?php
+
+                        if (isset($_SESSION['auth']) && $_SESSION['auth'] == true)
+                        {
+                            echo '<li><a href=' . BASE_URL . '/account><i class="glyphicon glyphicon-user"></i> Mon Compte</a>';
+                            echo '<li><a href=' . BASE_URL. '/disconnect><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a>';
+                        }
+                        else
+                        {
+                            echo "<li><a href=" . BASE_URL . "/login><i class='glyphicon glyphicon-log-in'></i> Se connecter</a></li>";
+                            echo "<li><a href=" . BASE_URL . "/register>S'inscrire</a></li>";
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <form id="searchForm">
+            <input type="text" placeholder="Rechercher...">
+            <input type="submit" value="">
+        </form>
+    </div></header>

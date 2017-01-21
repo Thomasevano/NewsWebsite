@@ -43,6 +43,10 @@ function getNews()
 
     $url = "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/";
     $rss = simplexml_load_file($url);
+
+    echo '<div class=" col-sm-12 col-md-6 col-lg-6">';
+    echo '<div class="row">';
+    echo '<div class="single_stuff wow fadeInDown">';
     echo"<div class='leftbar_content'><h2>L'actualité de BFMTV</h2></div>";
     foreach ($rss->channel->item as $item)
     {
@@ -52,6 +56,23 @@ function getNews()
         echo '<div class="single_stuff_img"><img src="'.$item->img.'" alt=""></div><div class="single_sarticle_inner"><a class="stuff_category" href="#">'.$item->category.'</a><div class="stuff_article_inner"><span class="stuff_date"><strong>'.$date.'</strong></span><h2><a href="'.$item->link.'">'.$item->title.'</a></h2>','<p>'.$item->description.'</p></div></div>';
         echo '</div>';
     }
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo '<div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="single_blog_sidebar wow fadeInUp">
+                    <h2>News Categorie</h2>
+                    <ul class="poplr_tagnav">
+                        <li><a href="#">Arts</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Nature</a></li>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Tourism</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </div>
+            </div>';
 }
 
 ?>

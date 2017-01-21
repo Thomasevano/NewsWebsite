@@ -1,6 +1,5 @@
 <?php
-session_start();
-unset($_SESSION);
-session_destroy();
-header('Location:'.BASE_URL);
+    session_start();
+    session_destroy();
+header('Location:' . BASE_URL);
 ?>

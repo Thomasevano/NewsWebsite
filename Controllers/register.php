@@ -1,15 +1,19 @@
+<?php include ('Core/session.class.php'); ?>
 <?php
-if($_SESSION['auth'])
+
+require "Models/register.php";
+
+if (isset($_POST['submit']))
 {
-    require "Models/register.php";
-    if(isset($_POST['submit']))
-    {
-        addUser();
-        echo ('Vous etes maintenant inscrit !');
-    }
-    require "Views/register.php";
+    addUser();
+
+    echo Session::setflash("Vous etes maintenant inscrit !");
+    echo Session::flash();
 }
 else
 {
-    header("Location:".BASE_URL."/disconnect");
+    header("Location:" . BASE_URL . "/disconnect");
 }
+
+require "Views/register.php";
+?>
