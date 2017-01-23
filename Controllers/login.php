@@ -1,4 +1,4 @@
-<?php include ('Core/session.class.php'); ?>
+<?php //include ('Core/session.class.php'); ?>
 <?php
 
 require "Models/login.php";
@@ -15,8 +15,11 @@ if (isset($_POST['submit']))
     }
     else
     {
-        echo Session::setflash("Mauvais identifiants", "danger");
-        echo Session::flash();
+        echo '<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Mauvais identifiants</strong></div>';
+        /*echo Session::setflash("Mauvais identifiants", "danger");
+        echo Session::flash();*/
     }
 }
 

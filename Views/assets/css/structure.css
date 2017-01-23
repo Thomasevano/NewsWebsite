@@ -24,7 +24,7 @@ h2{font-family:'Varela',sans-serif}
 .blue_bg{background-color:#09c}
 .blue_btn{background-color:#09c; color:#fff}
 .blue_btn:hover{background-color:#39c8f7; color:#fff}
-#header{float:left; display:inline; width:100%; background-color:#3b3b3b}
+#header{position: fixed; top: 0; z-index: 2; width:100%; background-color:#3b3b3b}
 .navbar{margin-bottom:0; width:80%; float:left}
 .navbar-default{background-color:#3b3b3b; border-color:#3b3b3b}
 .navbar-brand{font-family:'Eddie'; font-size:23px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
@@ -104,7 +104,7 @@ h2{font-family:'Varela',sans-serif}
 .poplr_tagnav li{}
 .poplr_tagnav li a{background-color:#fff; color:#bbb7b7; display:inline-block; float:left; margin-bottom:10px; margin-right:5px; padding:6px 12px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .poplr_tagnav li a:hover{background-color:#ffd62c; color:#fff; text-decoration:none}
-#footer{float:left; display:inline; width:100%; background:none repeat scroll 0 0 #3b3b3b; border-bottom:5px solid #282828; border-top:5px solid #282828}
+#footer{position: fixed; bottom: 0; width:100%; background:none repeat scroll 0 0 #3b3b3b; border-bottom:5px solid #282828; border-top:5px solid #282828}
 .footer_inner{float:left; display:inline; width:100%; padding:10px 0}
 .footer_inner p{color:#fff; font-size:13px}
 .footer_inner p a:hover{color:#ffd62c; text-decoration:none; border-bottom:1px solid #ffd62c}

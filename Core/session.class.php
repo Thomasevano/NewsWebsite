@@ -33,7 +33,7 @@ class Session
         }
     }
 
-    public static function setflash_link($message,$link, $type = 'success')
+    public static function setflash_link($message,$link,$type = 'success')
     {
         $_SESSION['flash_link']['message'] = $message;
         $_SESSION['flash_link']['link'] = $link;
