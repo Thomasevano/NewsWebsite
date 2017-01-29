@@ -3,10 +3,10 @@
         <h2>Connexion</h2>
 
         <div class="form-group">
-            <input type="email" id="mail" name="mail" class="form-control" placeholder="Email"/>
+            <input type="email" id="mail" name="mail" class="form-control" placeholder="Email" required/>
         </div>
         <div class="form-group">
-            <input type="password" id="mdp" name="mdp" class="form-control" placeholder="**********"/>
+            <input type="password" id="mdp" name="mdp" class="form-control" placeholder="**********" required/>
         </div>
         <button type="submit" name="submit" class="btn btn-warning pull-right">Valider</button>
 </form>

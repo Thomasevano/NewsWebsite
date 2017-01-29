@@ -3,61 +3,41 @@
         <h2>Inscription</h2>
 
         <div class="form-group">
-            <input type="email" id="mail" name="mail" class="form-control" placeholder="Email"/>
+            <input type="email" id="mail" name="mail" class="form-control" placeholder="Email" required/>
         </div>
         <div class="form-group">
-            <input type="text" id="login" name="login" class="form-control" placeholder="Login"/>
+            <input type="text" id="login" name="login" class="form-control" placeholder="Login" required/>
         </div>
         <div class="form-group">
-            <input type="password" id="mdp" name="mdp" class="form-control" placeholder="**********"/>
+            <input type="password" id="mdp" name="mdp" class="form-control" placeholder="**********" required/>
         </div>
 
         <hr>
-        <h4>Choississez 3 catégories que vous voulez suivre</h4><br>
+        <h3>Choississez les news que vous voulez suivre</h3><br>
 
         <div class="form-group">
-            <label>Categorie 1
-                <select class="form-control">
-                    <option></option>
-                    <option>BFMTV</option>
-                    <option>Culture</option>
-                    <option>Football</option>
-                    <option>Hight-Tech</option>
-                    <option>Jeux Videos</option>
-                    <option>Le Monde</option>
-                    <option>Sports</option>
-                </select>
-            </label>
+                <label>BFMTV
+                    <input type="checkbox" id="bfm" name="bfm">
+                </label>
+                <label>Culture
+                    <input type="checkbox" id="culture" name="culture">
+                </label>
+                <label>Football
+                    <input type="checkbox" id="foot" name="foot">
+                </label>
+                <label>Hight-Tech
+                    <input type="checkbox" id="high-tech" name="high-tech">
+                </label>
+                <label>Jeux Videos
+                    <input type="checkbox" id="jeux videos" name="jeux videos">
+                </label>
+                <label>Le Monde
+                    <input type="checkbox" id="le monde" name="le monde">
+                </label>
+                <label>Sports
+                    <input type="checkbox" id="sports" name="sports">
+                </label>
         </div>
 
-        <div class="form-group">
-            <label>Categorie 2
-                <select class="form-control">
-                    <option></option>
-                    <option>BFMTV</option>
-                    <option>Culture</option>
-                    <option>Football</option>
-                    <option>Hight-Tech</option>
-                    <option>Jeux Videos</option>
-                    <option>Le Monde</option>
-                    <option>Sports</option>
-                </select>
-            </label>
-        </div>
-
-        <div class="form-group">
-            <label>Categorie 3
-                <select class="form-control">
-                    <option></option>
-                    <option>BFMTV</option>
-                    <option>Culture</option>
-                    <option>Football</option>
-                    <option>Hight-Tech</option>
-                    <option>Jeux Videos</option>
-                    <option>Le Monde</option>
-                    <option>Sports</option>
-                </select>
-            </label>
-        </div>
-        <button type="submit" name="submit" class="btn btn-warning pull-right">Valider</button>
+    <button type="submit" name="submit" class="btn btn-warning pull-right">Valider</button>
 </form>
