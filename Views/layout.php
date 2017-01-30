@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>
-<?php include('Core/session.class.php'); ?>
 
 <section id="contentbody">
     <div class="container">

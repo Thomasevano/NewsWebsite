@@ -1,6 +1,6 @@
 <?php
 session_start();
-/*require "Models/connect.php";*/
+require "Models/connect.php";
 
 define('BASE_URL', dirname($_SERVER['SCRIPT_NAME']));
 

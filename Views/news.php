@@ -1,38 +1,42 @@
-<div class="col-sm-12 col-md-3 col-lg-3">
-    <div class="popular_categori">
-        <h2 class="limeblue_bg">News Categorie</h2>
-        <ul class="poplr_catgnva wow fadeInDown">
-            <li><a href="javascript:visibilite('bfm');">BFMTV</a></li>
-            <li><a href="javascript:visibilite('culture');">Culture</a></li>
-            <li><a href="javascript:visibilite('football');">Football</a></li>
-            <li><a href="javascript:visibilite('high-tech');">High-Tech</a></li>
-            <li><a href="javascript:visibilite('jeux videos');">Jeux Videos</a></li>
-            <li><a href="javascript:visibilite('le monde');">Le Monde</a></li>
-            <li><a href="javascript:visibilite('sports');">Sports</a></li>
-        </ul>
-    </div>
-</div>
+<?php
+
+echo Flux::fluxrss("bfm", "block", "BFM", "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/");
+
+echo Flux::fluxrss("culture", "none", "Culturelle", "http://www.lemonde.fr/culture/rss_full.xml");
+
+echo Flux::fluxrss("football", "none", "Footbalistique", "http://www.lequipe.fr/rss/actu_rss_Football.xml");
+
+echo Flux::fluxrss("high-tech", "none", "High-Tech", "http://www.clubic.com/articles.rss");
+
+echo Flux::fluxrss("jeux video", "none", "Jeux-Videoludique", "http://www.jeuxvideo.com/rss/rss.xml");
+
+echo Flux::fluxrss("le monde", "none", "Le Monde", "http://www.lemonde.fr/rss/une.xml");
+
+echo Flux::fluxrss("sports", "none", "Sportive", "http://www.lequipe.fr/rss/actu_rss.xml");
+
+echo Flux::fluxrss("les echos", "none", "Les Echos", "http://www.lesechos.fr/rss/rss_articles_journal.xml");
+
+
+include 'Views/categorie.php';
+
+?>
 
 <script type="text/javascript">
 
     //<![CDATA[
 
-    function visibilite(id)	{
-
+    function visibilite(id)
+    {
         var news_categorie = document.getElementsByTagName('div');
 
-        for(var no=0;no<news_categorie.length;no++){
-
-            if(news_categorie[ no].className == 'news_categorie'){ // on cible les divs dont la class est 'divs'
-
-                news_categorie[ no].style.display = "none"; // on les masque tous
-
+        for (var no=0;no<news_categorie.length;no++)
+        {
+            if(news_categorie[ no].className == 'news_categorie')
+            {
+                news_categorie[ no].style.display = "none";
             }
-
         }
-
-        document.getElementById(id).style.display = "block"; // on affiche le div appelé
-
+        document.getElementById(id).style.display = "block";
     }
 
     //]]>
@@ -56,14 +60,4 @@
             });
         }
     });
-</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
 </script>
