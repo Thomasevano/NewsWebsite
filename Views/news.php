@@ -44,15 +44,15 @@ include 'Views/categorie.php';
 </script>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="<?= BASE_URL; ?>/Views/assets/js/jquery.min.js"></script>
 <script>
     $(window).scroll(function () {
         if ($(window).scrollTop() == $(document).height() - $(window).height()) {
             $.ajax({
-                url: "<?= BASE_URL; ?>/news.php?News=" + $(".item:last").attr("item"),
-                success: function (html) {
-                    if (html) {
-                        $(".row").append(html);
+                url: "<?= BASE_URL; ?>/flux.class.php?Fluxx::fluxrss=" + $(".item:last").attr("item"),
+                success: function (div) {
+                    if (div) {
+                        $(".row").append(div);
                     } else {
                         alert("Il n'y a plus de news");
                     }
