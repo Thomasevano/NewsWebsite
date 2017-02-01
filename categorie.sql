@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 18 Janvier 2017 à 23:24
+-- Généré le :  Mer 01 Février 2017 à 23:26
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -23,42 +23,49 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Structure de la table `categorie`
 --
 
-CREATE TABLE `user` (
-  `id_u` int(11) NOT NULL,
-  `login` varchar(50) DEFAULT NULL,
-  `mdp` varchar(255) DEFAULT NULL,
-  `mail` varchar(255) DEFAULT NULL
+CREATE TABLE `categorie` (
+  `id_c` int(11) NOT NULL,
+  `id_name` varchar(50) NOT NULL,
+  `titre` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
--- Contenu de la table `user`
+-- Contenu de la table `categorie`
 --
 
-INSERT INTO `user` (`id_u`, `login`, `mdp`, `mail`) VALUES
-(1, 'thomas', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'test@mail.fr');
+INSERT INTO `categorie` (`id_c`, `id_name`, `titre`) VALUES
+(9, 'bfm', 'BFM'),
+(2, 'culture', 'Culture'),
+(3, 'football', 'Football'),
+(4, 'high-tech', 'High-Tech'),
+(5, 'jeux-video', 'Jeux-Videos'),
+(6, 'le-monde', 'Le Monde'),
+(7, 'sports', 'Sports'),
+(8, 'les-echos', 'Les Echos'),
+(1, ' ', ' ');
 
 --
 -- Index pour les tables exportées
 --
 
 --
--- Index pour la table `user`
+-- Index pour la table `categorie`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_u`);
+ALTER TABLE `categorie`
+  ADD PRIMARY KEY (`id_c`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT pour la table `user`
+-- AUTO_INCREMENT pour la table `categorie`
 --
-ALTER TABLE `user`
-  MODIFY `id_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `categorie`
+  MODIFY `id_c` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
