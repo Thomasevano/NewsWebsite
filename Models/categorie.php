@@ -2,6 +2,6 @@
 
     global $bdd;
 
-    $cat = $bdd->prepare("SELECT * FROM categorie");
+    $cat = $bdd->prepare("SELECT * FROM categorie ORDER BY id_name");
     $cat->execute();
     $cat->fetch();

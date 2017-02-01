@@ -16,28 +16,14 @@
         <h3>Choississez les news que vous voulez suivre</h3><br>
 
         <div class="form-group">
-                <label>BFMTV
-                    <input type="checkbox" id="bfm" name="bfm">
-                </label>
-                <label>Culture
-                    <input type="checkbox" id="culture" name="culture">
-                </label>
-                <label>Football
-                    <input type="checkbox" id="foot" name="foot">
-                </label>
-                <label>Hight-Tech
-                    <input type="checkbox" id="high-tech" name="high-tech">
-                </label>
-                <label>Jeux Videos
-                    <input type="checkbox" id="jeux videos" name="jeux videos">
-                </label>
-                <label>Le Monde
-                    <input type="checkbox" id="le monde" name="le monde">
-                </label>
-                <label>Sports
-                    <input type="checkbox" id="sports" name="sports">
-                </label>
+            <?php include 'Models/categorie.php';
+            while ($categorie = $cat->fetch())
+            {
+                echo '<label>' . $categorie["titre"] . ' <input type="checkbox" id="' . $categorie["id_name"] . '" name="' . $categorie["id_name"] . '"></label>';
+                echo '</br>';
+            }
+            ?>
         </div>
 
-    <button type="submit" name="submit" class="btn btn-warning pull-right">Valider</button>
+        <button type="submit" name="submit" class="btn btn-warning pull-right">Valider</button>
 </form>

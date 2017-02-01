@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= BASE_URL; ?>/Views/assets/css/font.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>/Views/assets/css/animate.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>/Views/assets/css/structure.css">
+    <link rel="icon" type="image/png" href="<?= BASE_URL; ?>/Views/img/flux.png" />
     <!--[if lt IE 9]>
     <script src="<?= BASE_URL; ?>/Views/assets/js/html5shiv.min.js"></script>
     <script src="<?= BASE_URL; ?>/Views/assets/js/respond.min.js"></script>
