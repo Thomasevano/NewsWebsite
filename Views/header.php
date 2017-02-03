@@ -51,9 +51,9 @@
                 </div>
             </div>
         </nav>
-        <form id="searchForm">
+        <!--<form id="searchForm">
             <input type="text" placeholder="Rechercher...">
             <input type="submit" value="">
-        </form>
+        </form>-->
     </div>
 </header>

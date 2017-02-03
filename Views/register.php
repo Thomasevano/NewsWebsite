@@ -20,7 +20,7 @@
             while ($categorie = $cat->fetch())
             {
                 echo '<label>' . $categorie["titre"] . ' <input type="checkbox" id="' . $categorie["id_name"] . '" name="' . $categorie["id_name"] . '"></label>';
-                echo '</br>';
+                /*echo '</br>';*/
             }
             ?>
         </div>

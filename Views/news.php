@@ -2,11 +2,9 @@
 
 echo Flux::fluxrss("bfm", "BFM", "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/");
 
-echo Flux::fluxrss("culture", "Culturelle", "http://www.lemonde.fr/culture/rss_full.xml");
+echo Flux::fluxrss("le-monde-culture", "Culturelle", "http://www.lemonde.fr/culture/rss_full.xml");
 
 echo Flux::fluxrss("football", "Footbalistique", "http://www.lequipe.fr/rss/actu_rss_Football.xml");
-
-echo Flux::fluxrss("high-tech", "High-Tech", "http://www.clubic.com/articles.rss");
 
 echo Flux::fluxrss("jeux-video", "Jeux-Videoludique", "http://www.jeuxvideo.com/rss/rss.xml");
 
@@ -14,7 +12,7 @@ echo Flux::fluxrss("le-monde", "Le Monde", "http://www.lemonde.fr/rss/une.xml");
 
 echo Flux::fluxrss("sports", "Sportive", "http://www.lequipe.fr/rss/actu_rss.xml");
 
-echo Flux::fluxrss("les-echos", "Les Echos", "http://www.lesechos.fr/rss/rss_articles_journal.xml");
+echo Flux::fluxrss("le-monde-technologies", "Le Monde Technologies", "http://www.lemonde.fr/technologies/rss_full.xml");
 
 
 include 'Views/categorie.php';
