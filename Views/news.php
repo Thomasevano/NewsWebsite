@@ -1,5 +1,7 @@
 <?php
 
+echo Flux::fluxrss("allocine", "Cinéma & Séries", "http://rss.allocine.fr/ac/actualites/");
+
 echo Flux::fluxrss("bfm", "BFM", "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/");
 
 echo Flux::fluxrss("le-monde-culture", "Culturelle", "http://www.lemonde.fr/culture/rss_full.xml");
@@ -9,6 +11,8 @@ echo Flux::fluxrss("football", "Footbalistique", "http://www.lequipe.fr/rss/actu
 echo Flux::fluxrss("jeux-video", "Jeux-Videoludique", "http://www.jeuxvideo.com/rss/rss.xml");
 
 echo Flux::fluxrss("le-monde", "Le Monde", "http://www.lemonde.fr/rss/une.xml");
+
+echo Flux::fluxrss("developpez", "Developpement", "https://www.developpez.com/index/rss");
 
 echo Flux::fluxrss("sports", "Sportive", "http://www.lequipe.fr/rss/actu_rss.xml");
 

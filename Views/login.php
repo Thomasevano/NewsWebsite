@@ -8,5 +8,6 @@
         <div class="form-group">
             <input type="password" id="mdp" name="mdp" class="form-control" placeholder="**********" required/>
         </div>
-        <button type="submit" name="submit" class="btn btn-warning pull-right">Valider</button>
+        <button type="reset" name="reset" class="btn btn-danger">Reset</button>
+        <button type="submit" name="submit" class="btn btn-success">Valider</button>
 </form>

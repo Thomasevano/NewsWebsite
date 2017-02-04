@@ -117,7 +117,7 @@ h2{font-family:'Varela',sans-serif}
 .singlepost_content > ul{padding-left:15px}
 .singlepost_content > ul li{background-image:url("img/arrow_icon.png"); background-repeat:no-repeat; background-position:left center; padding-left:20px; margin-bottom:8px}
 .singlepost_content > ul li:hover{opacity:0.50}
-.social_area{display:inline; float:left; margin-top:20px; padding:10px 0; width:100%}
+.social_area{display:inline; float:left; padding:10px 0; width:100%}
 .social_area ul{display:inline-block; text-align:center; width:100%}
 .social_area ul li{display:inline-block}
 .social_area ul li > a{background:none repeat scroll 0 0 grey; border-radius:50%; color:white; font-size:24px; margin:0 4px; padding:6px 12px; text-decoration:none; display:inline-block; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
@@ -145,6 +145,79 @@ h2{font-family:'Varela',sans-serif}
 .scrollToTop:hover, .scrollToTop:focus{background-color:#09c; color:#FFF !important; text-decoration:none; outline:none}
 #preloader{position:fixed; top:0; left:0; right:0; bottom:0; background-color:#fff; z-index:99}
 #status{width:200px; height:200px; position:absolute; left:50%; top:50%; background-image:url("img/status.gif"); background-repeat:no-repeat; background-position:center; margin:-100px 0 0 -100px}
+.material-switch > input[type="checkbox"] {
+    display: none;
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 40px;
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+.error {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.error-code {
+    bottom: 60%;
+    color: #2d353c;
+    font-size: 96px;
+    line-height: 100px;
+}
+
+.error-desc {
+    font-size: 12px;
+    color: #647788;
+}
+
+.m-b-10 {
+    margin-bottom: 10px!important;
+}
+
+.m-b-20 {
+    margin-bottom: 20px!important;
+}
+
+.m-t-20 {
+    margin-top: 20px!important;
+}
 
 @media(max-width:1199px ){
 .navbar-collapse{padding-right:0}

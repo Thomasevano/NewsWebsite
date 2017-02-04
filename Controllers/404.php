@@ -1,7 +1,4 @@
 <?php
-
-include ('Core/alert.class.php');
-
-echo Alert::alert_message("Erreur 404 la page recherchée n'a pas été trouver", "danger");
-
+require "Models/404.php";
+require "Views/404.php";
 ?>
