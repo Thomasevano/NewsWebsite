@@ -12,7 +12,7 @@ echo Flux::fluxrss("jeux-video", "Jeux-Videoludique", "http://www.jeuxvideo.com/
 
 echo Flux::fluxrss("le-monde", "Le Monde", "http://www.lemonde.fr/rss/une.xml");
 
-echo Flux::fluxrss("developpez", "Developpement", "https://www.developpez.com/index/rss");
+echo Flux::fluxrss("developpez", "Developpez", "https://www.developpez.com/index/rss");
 
 echo Flux::fluxrss("sports", "Sportive", "http://www.lequipe.fr/rss/actu_rss.xml");
 

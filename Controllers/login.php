@@ -11,6 +11,7 @@ if (isset($_POST['submit']))
     if($user)
     {
         $_SESSION['auth'] = true;
+        $_SESSION['id'] = $user['id_u'];
         $_SESSION['login'] = $user['login'];
         $_SESSION['mail'] = $user['mail'];
         $_SESSION['mdp'] = $user['mdp'];

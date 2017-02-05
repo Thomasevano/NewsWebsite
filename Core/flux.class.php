@@ -35,10 +35,14 @@ class Flux
                                         <p> '. $item->description .' </p>
                                         <div class="social_area wow fadeInLeft">
                                             <ul>
-                                                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?display=popup&u='. $item->link .'"><span class="fa fa-facebook"></span></a></li>
-                                                <li><a target="_blank" href="https://twitter.com/share?text='.$item->title.'&url='.$item->link.'"> <span class="fa fa-twitter"></span></a></li>
-                                                <li><a href="#"><i class="fa fa-star-o"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='. $item->link .'"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a target="_blank" href="https://twitter.com/share?text='.$item->title.'&url='.$item->link.'"> <span class="fa fa-twitter"></span></a></li>';
+
+                                                if (isset($_SESSION["auth"]) && $_SESSION["auth"] == true)
+                                                {
+                                                    $fluxrss.= '<li><a href="'.BASE_URL.'/articles?link='.$item->link.'&titre='.$item->title.'"><i class="fa fa-star-o"></i></a></li>';
+                                                }
+                                            $fluxrss.= '</ul>
                                             </ul>
                                         </div>
                                     </div>
@@ -60,11 +64,14 @@ class Flux
                                         <p> '. $item->description .' </p>
                                         <div class="social_area wow fadeInLeft">
                                             <ul>
-                                                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?display=popup&u='. $item->link .'"><span class="fa fa-facebook"></span></a></li>
-                                                <li><a target="_blank" href="https://twitter.com/share?text='.$item->title.'&url='.$item->link.'"> <span class="fa fa-twitter"></span></a></li>
-                                                <li><a href="'.BASE_URL.'"><i class="fa fa-star-o"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                            </ul>
+                                                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='. $item->link .'"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a target="_blank" href="https://twitter.com/share?text='.$item->title.'&url='.$item->link.'"> <span class="fa fa-twitter"></span></a></li>';
+
+                                                if (isset($_SESSION["auth"]) && $_SESSION["auth"] == true)
+                                                {
+                                                    $fluxrss.= '<li><a href="'.BASE_URL.'/articles?link='.$item->link.'&titre='.$item->title.'"><i class="fa fa-star-o"></i></a></li>';
+                                                }
+                                            $fluxrss.= '</ul>
                                         </div>
                                     </div>
                                 </div>
