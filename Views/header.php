@@ -38,8 +38,8 @@
 
                         if (isset($_SESSION['auth']) && $_SESSION['auth'] == true)
                         {
-                            echo '<li><a href=' . BASE_URL . '/account><i class="glyphicon glyphicon-user"></i> Mon Compte</a>';
-                            echo '<li><a href=' . BASE_URL. '/disconnect><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a>';
+                            echo '<li><a href=' . BASE_URL . '/account><i class="glyphicon glyphicon-user"></i> Mon Compte</a></li>';
+                            echo '<li><a href=' . BASE_URL. '/disconnect><i class="glyphicon glyphicon-log-out"></i> Déconnexion</a></li>';
                         }
                         else
                         {

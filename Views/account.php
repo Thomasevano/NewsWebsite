@@ -33,24 +33,24 @@
     </div>
 </div>
 <h3>Vos catégories préférées: </h3>
-<form action="<?= BASE_URL; ?>/favoris" method="post">
-        <div class="form-group">
-            <ul class="list-group">
-            <?php include 'Models/categorie.php';
-            while ($categorie = $cat->fetch())
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <?php include "Models/account.php";
+            while ($fav = $favoris->fetch())
             {
-                echo '<li class="list-group-item">
-                        '.$categorie["titre"].'
-                        <div class="material-switch pull-right">
-                            <input  type="checkbox" id="'.$categorie["id_name"].'" name="chk[]" value="'.$categorie["titre"].'"/>
-                            <label for="'.$categorie["id_name"].'" class="label-primary"></label>
-                        </div>
-                    </li>';
+                echo'<tr>
+                <td>'.$fav['titre'].'</td>
+                <td class="text-center"><a href="'.BASE_URL.'/delfavoris?id_u='.$_SESSION['id'].'&id_c='.$fav['id_c'].'&titre='.$fav['titre'].'" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>';
             }
             ?>
-            </ul>
-        </div>
-
-        <button type="reset" name="reset" class="btn btn-danger">Reset</button>
-        <button type="submit" name="submit" class="btn btn-success">Valider</button>
-</form>
+        </table>
+    </div>
+</div>
